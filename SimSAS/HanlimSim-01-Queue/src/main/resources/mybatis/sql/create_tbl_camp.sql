@@ -123,4 +123,6 @@ where 1=1
 select * from tbl_camp;
 ---------------
 call parsedatetime('2001-07-12 03:05:06','yyyy-MM-dd HH:mm:ss');
+--
 
+{"campCode":"code100","appKdCd":"appKdCd","pushTopMessage":"top message","pushBottomMessage":"bottom message","pushIosMessage":"ios message","talkDispYn":"N","detailUrl":"http://m.11st.co.kr/MW/TData/dataFree.tmall","bannerUrl":"이미지URL","msgGrpNo":"1235L","sendAllwBgnDt":"send_allw_bgn_dt","campContent":"content101"}
