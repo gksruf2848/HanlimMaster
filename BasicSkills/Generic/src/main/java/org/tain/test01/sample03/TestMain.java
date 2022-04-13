@@ -87,7 +87,7 @@ public class TestMain {
 		
 	}
 	
-	public static void putEquals(Pair<?, ?> p1, Pair<?, ?> p2) {
+	public static void putEquals(Pair<?, ?> p1, Pair<?, ?> p2) { //와일드카드를 썼기 때문에 앞에 < , >를 안 붙여도 된다 !
 		
 		if(Util.equals(p1, p2)) {
 			System.out.println(">>> 두 값이 정확히 일치합니다 !");
