@@ -4,7 +4,7 @@ public class Tv {
 	
 	private String name;
 	
-	public Tv() { };
+	public Tv() { }
 	
 	public Tv(String name) { this.name = name; }
 	

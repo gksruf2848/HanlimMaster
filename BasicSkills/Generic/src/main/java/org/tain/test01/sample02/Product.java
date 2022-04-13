@@ -5,7 +5,7 @@ public class Product<T, M> {
 	private T type;
 	private M model;
 	
-	public Product() { };
+	public Product() { }
 	
 	public Product(T type, M model) {
 		this.type = type;

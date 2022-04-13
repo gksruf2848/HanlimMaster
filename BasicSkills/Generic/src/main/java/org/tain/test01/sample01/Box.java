@@ -4,7 +4,7 @@ public class Box<T> {
 	
 	private T type;
 	
-	public Box() { };
+	public Box() { }
 	
 	public Box(T type) { this.type = type; }
 	
