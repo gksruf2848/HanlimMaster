@@ -1,0 +1,62 @@
+SAS가 호출할때, json 항목 리스트 정보 입니다.
+
+campaigncode     $20
+treatmentcode    $20
+AppKdCd  $2  
+MsgTypCd $2 
+Memno    $10           
+MessageData $2000  
+AlimiData   $2000    
+TalkTitle      $100            
+TalkDispYn     $10          
+TalkMsgTmpltNo $50        
+Android_TopmessageData $1000         
+Android_BtmmessageData $1000         
+Ios_messageData        $2000             
+BannerUrl $1000        
+DetailUrl $1000        
+EtcData $100           
+BlockTopCapMain_Value   $500         
+BlockTopCapSub_Value    $100         
+BlockBoldTextMain_Value $500    
+BlockBoldTextSub_Value  $500    
+BlockImg500_Value       $2000       
+BlockBtnView_Value      $100         
+BlockLinkUrlMobile_Value $500      
+BlockLinkUrlWeb_Value    $500    
+request_dt                $20
+return_code              $500 
+
+
+{
+"campaigncode":"",
+"treatmentcode":"",
+"AppKdCd":"",
+"MsgTypCd":"",
+"Memno":"",
+"MessageData":"",
+"AlimiData":"",
+"TalkTitle":"",      
+"TalkDispYn":"",      
+"TalkMsgTmpltNo":"",      
+"Android_TopmessageData":"",     
+"Android_BtmmessageData":"",
+"Ios_messageData":"",
+"BannerUrl":"",
+"DetailUrl":"",
+"EtcData":"",
+"BlockTopCapMain_Value":"",
+"BlockTopCapSub_Value":"",
+"BlockBoldTextMain_Value":"",
+"BlockBoldTextSub_Value":"",
+"BlockImg500_Value":"",
+"BlockBtnView_Value":"",
+"BlockLinkUrlMobile_Value":"",
+"BlockLinkUrlWeb_Value":"",
+"request_dt":"",
+"return_code":"",
+}
+
+
+>숫자 앞에 $ 표시는 해당 항목이 문자형을 의미합니다.
+-요청할 때 해당 항목에 값이 없을 경우 NULL 또는 '' 형태로 호출 됩니다.
