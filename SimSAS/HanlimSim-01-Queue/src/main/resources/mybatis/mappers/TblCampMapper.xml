@@ -8,61 +8,103 @@
 	<select id="selectAll" parameterType="CamelMap" resultType="CamelMap">
 		select
 			id
-			, camp_code
-			
+			, campaign_code
+			, treatment_code
 			, app_kd_cd
-			, push_top_message
-			, push_bottom_message
-			, push_ios_message
-			, talk_disp_yn 
+			, msg_typ_cd
+			, mem_no
+			, message_data
+			, alimi_data
+			, talk_title
+			, talk_disp_yn
+			, talk_msg_tmplt_no
+			, android_top_message_data
+			, android_btm_message_data
+			, ios_message_data
+			, banner_url
 			, detail_url
-			, banner_url 
-			, msg_grp_no 
-			, send_allw_bgn_dt
-	
-			, camp_content
-			, flag_send
+			, etc_data
+			, block_top_cap_main_value
+			, block_top_cap_sub_value
+			, block_bold_text_main_value
+			, block_bold_text_sub_value
+			, block_img500_value
+			, block_btn_view_value
+			, block_link_url_mobile_value
+			, block_link_url_web_value
+			, request_dt
+			, return_code
+
+			, send_yn
 			, time_insert
 			, time_send
 		from
-			tbl_camp
+			tbl_camp3
 		where 1=1
 	</select>
 	
 	<!-- insertOne -->
 	<insert id="insertOne" parameterType="CamelMap">
-		insert into tbl_camp
+		insert into tbl_camp3
 		(
-			camp_code,
-			
+			campaign_code,
+			treatment_code,
 			app_kd_cd,
-			push_top_message,
-			push_bottom_message,
-			push_ios_message,
+			msg_typ_cd,
+			mem_no,
+			message_data,
+			alimi_data,
+			talk_title,
 			talk_disp_yn,
-			detail_url,
+			talk_msg_tmplt_no,
+			android_top_message_data,
+			android_btm_message_data,
+			ios_message_data,
 			banner_url,
-			msg_grp_no,
-			send_allw_bgn_dt,
-			
-			camp_content,
-			flag_send
+			detail_url,
+			etc_data,
+			block_top_cap_main_value,
+			block_top_cap_sub_value,
+			block_bold_text_main_value,
+			block_bold_text_sub_value,
+			block_img500_value,
+			block_btn_view_value,
+			block_link_url_mobile_value,
+			block_link_url_web_value,
+			request_dt,
+			return_code,
+
+			send_yn
 		)
 		values
 		(
-			#{campCode},
-			
+			#{campaignCode},
+			#{treatmentCode},
 			#{appKdCd},
-			#{pushTopMessage},
-			#{pushBottomMessage},
-			#{pushIosMessage},
+			#{msgTypCd},
+			#{memNo},
+			#{messageData},
+			#{alimiData},
+			#{talkTitle},
 			#{talkDispYn},
-			#{detailUrl},
+			#{talkMsgTmpltNo},
+			#{androidTopMessageData},
+			#{androidBtmMessageData},
+			#{iosMessageData},
 			#{bannerUrl},
-			#{msgGrpNo},
-			#{sendAllwBgnDt},
+			#{detailUrl},
+			#{etcData},
+			#{blockTopCapMainValue},
+			#{blockTopCapSubValue},
+			#{blockBoldTextMainValue},
+			#{blockBoldTextSubValue},
+			#{blockImg500Value},
+			#{blockBtnViewValue},
+			#{blockLinkUrlMobileValue},
+			#{blockLinkUrlWebValue},
+			#{requestDt},
+			#{returnCode},
 			
-			#{campContent},
 			'N'
 		)
 	</insert>
@@ -70,45 +112,59 @@
 	<!-- updateReady -->
 	<update id="updateReady">
 		update
-			tbl_camp
+			tbl_camp3
 		set
-			flag_send = 'R'
+			send_yn = 'R'
 		where
-			flag_send = 'N'
+			send_yn = 'N'
 	</update>
 	
 	<!-- selectReady -->
 	<select id="selectReady" resultType="CamelMap">
 		select
 			id
-			, camp_code
-			
+			, campaign_code
+			, treatment_code
 			, app_kd_cd
-			, push_top_message
-			, push_bottom_message
-			, push_ios_message
-			, talk_disp_yn 
+			, msg_typ_cd
+			, mem_no
+			, message_data
+			, alimi_data
+			, talk_title
+			, talk_disp_yn
+			, talk_msg_tmplt_no
+			, android_top_message_data
+			, android_btm_message_data
+			, ios_message_data
+			, banner_url
 			, detail_url
-			, banner_url 
-			, msg_grp_no 
-			, send_allw_bgn_dt
-			
-			, camp_content
-			, flag_send
+			, etc_data
+			, block_top_cap_main_value
+			, block_top_cap_sub_value
+			, block_bold_text_main_value
+			, block_bold_text_sub_value
+			, block_img500_value
+			, block_btn_view_value
+			, block_link_url_mobile_value
+			, block_link_url_web_value
+			, request_dt
+			, return_code
+
+			, send_yn
 			, time_insert
 			, time_send
 		from
-			tbl_camp
+			tbl_camp3
 		where 1=1
-			and flag_send = 'R'
+			and send_yn = 'R'
 	</select>
 	
 	<!-- updateById -->
 	<update id="updateById" parameterType="CamelMap">
 		update
-			tbl_camp
+			tbl_camp3
 		set
-			flag_send = 'Y',
+			send_yn = 'Y',
 			time_send = current_timestamp()
 		where
 			id = #{id}
@@ -118,30 +174,44 @@
 	<select id="selectOne" parameterType="CamelMap" resultType="CamelMap">
 		select
 			id
-			, camp_code
-			
+			, campaign_code
+			, treatment_code
 			, app_kd_cd
-			, push_top_message
-			, push_bottom_message
-			, push_ios_message
-			, talk_disp_yn 
+			, msg_typ_cd
+			, mem_no
+			, message_data
+			, alimi_data
+			, talk_title
+			, talk_disp_yn
+			, talk_msg_tmplt_no
+			, android_top_message_data
+			, android_btm_message_data
+			, ios_message_data
+			, banner_url
 			, detail_url
-			, banner_url 
-			, msg_grp_no 
-			, send_allw_bgn_dt
-			
-			, camp_content
-			, flag_send
+			, etc_data
+			, block_top_cap_main_value
+			, block_top_cap_sub_value
+			, block_bold_text_main_value
+			, block_bold_text_sub_value
+			, block_img500_value
+			, block_btn_view_value
+			, block_link_url_mobile_value
+			, block_link_url_web_value
+			, request_dt
+			, return_code
+
+			, send_yn
 			, time_insert
 			, time_send
 		from
-			tbl_camp
+			tbl_camp3
 		where 1=1
 		<if test='id != null'>
 			and id = #{id}
 		</if>
 		<if test='campCode != null'>
-			and camp_code = #{campCode}
+			and campaign_code = #{campaignCode}
 		</if>
 	</select>
 	
