@@ -36,8 +36,6 @@ public class TestMain {
 		tvStorage.add(new Tv("장난감 티비"));
 		System.out.println(">>> " + tvStorage);
 		
-		
-		
 	}
 	
 }
